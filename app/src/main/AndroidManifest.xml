@@ -33,8 +33,7 @@
             android:noHistory="true"/>
 
         <activity
-            android:name=".loginView.LoginActivity"
-            android:noHistory="true">
+            android:name=".loginView.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

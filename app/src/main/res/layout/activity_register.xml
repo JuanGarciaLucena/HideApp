@@ -40,7 +40,8 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:inputType="textEmailAddress"
-            android:background="@drawable/border_complete"/>
+            android:background="@drawable/border_complete"
+            android:text="monoborracho@gmail.com"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -56,7 +57,8 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:inputType="textEmailAddress"
-            android:background="@drawable/border_complete"/>
+            android:background="@drawable/border_complete"
+            android:text="monoborracho@gmail.com"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -72,7 +74,8 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:inputType="textPassword"
-            android:background="@drawable/border_complete"/>
+            android:background="@drawable/border_complete"
+            android:text="omerta1984"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -88,7 +91,8 @@
             android:textSize="15sp"
             android:padding="10dp"
             android:inputType="textPassword"
-            android:background="@drawable/border_complete"/>
+            android:background="@drawable/border_complete"
+            android:text="omerta1984"/>
     </LinearLayout>
 
 
