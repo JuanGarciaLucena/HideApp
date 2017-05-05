@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "702041945182",
+    "firebase_url": "https://hideapp-163809.firebaseio.com",
+    "project_id": "hideapp-163809",
+    "storage_bucket": "hideapp-163809.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702041945182:android:9395d83fbd6ad3d4",
+        "android_client_info": {
+          "package_name": "com.emebesoft.hideapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702041945182-dm91kkddflifqf4l3a4nmk5vu137fdnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZC2Qwh-H2rOWLI6CaVfYlxHxFHc7AGGM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
