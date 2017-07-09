@@ -18,6 +18,7 @@ import com.emebesoft.hideapp.application.HideAppApplication;
 import com.emebesoft.hideapp.hideDetailView.HideDetailActivity;
 import com.emebesoft.hideapp.loginView.LoginActivity;
 import com.emebesoft.hideapp.objects.Position;
+import com.emebesoft.hideapp.userView.UserActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.parceler.Parcels;
@@ -29,6 +30,7 @@ import butterknife.ButterKnife;
 public class HideListActivity extends AppCompatActivity implements HideListView{
 
     @BindView(R.id.hideRecyclerView)RecyclerView hideRecyclerView;
+    @BindView(R.id.appbar) Toolbar appbar;
 
     private static final String POSITION = "position";
     private HideRecyclerViewAdapter adapter;
@@ -42,8 +44,7 @@ public class HideListActivity extends AppCompatActivity implements HideListView{
         setContentView(R.layout.activity_hide_list);
         ButterKnife.bind(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.appbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(appbar);
         getSupportActionBar().setTitle("HideApp");
 
         hideListPresenter.requestHideListInfo();
@@ -87,6 +88,7 @@ public class HideListActivity extends AppCompatActivity implements HideListView{
         switch(item.getItemId()) {
 
             case R.id.menuUser:
+                startActivity(new Intent(HideListActivity.this, UserActivity.class));
                 return true;
 
             case R.id.menuExit:

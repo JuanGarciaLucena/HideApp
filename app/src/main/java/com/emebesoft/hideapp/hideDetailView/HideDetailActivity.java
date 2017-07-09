@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +22,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import org.parceler.Parcels;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -61,7 +66,21 @@ public class HideDetailActivity extends AppCompatActivity implements OnMapReadyC
         btnFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HideDetailActivity.this, ReservationActivity.class));
+
+                List<String> reservedDates = new ArrayList<>();
+                for(int i = 0; i < position.getPositionReservation().toArray().length; i++){
+                    reservedDates.add((String)position.getPositionReservation().toArray()[i]);
+                }
+
+                String[] reservedArrayDates = new String[reservedDates.size()];
+                reservedDates.toArray(reservedArrayDates);
+
+                Intent reservationIntent = new Intent(HideDetailActivity.this, ReservationActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putStringArray("reservations", reservedArrayDates);
+                reservationIntent.putExtras(bundle);
+                startActivity(reservationIntent);
+
             }
         });
 
