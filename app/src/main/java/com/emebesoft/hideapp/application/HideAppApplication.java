@@ -1,6 +1,7 @@
 package com.emebesoft.hideapp.application;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -16,5 +17,7 @@ public class HideAppApplication  extends Application {
     public void onCreate() {
         super.onCreate();
         mAuth = FirebaseAuth.getInstance();
+
+        Log.d("paco", "Prueba");
     }
 }
